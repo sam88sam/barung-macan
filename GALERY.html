@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        /* Gaya untuk container gambar */
+        .image-container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        /* Gaya untuk setiap gambar */
+        .image-container img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            margin: 5px;
+            cursor: pointer; /* Menjadikan kursor berubah menjadi pointer saat diarahkan ke gambar */
+        }
+
+        /* Gaya overlay untuk gambar yang diperbesar */
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
+
+        /* Gaya gambar yang diperbesar */
+        .overlay img {
+            max-width: 90%;
+            max-height: 90%;
+        }
+
+        /* Gaya overlay yang ditampilkan saat gambar diperbesar */
+        .overlay.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="image-container">
+        <img src="1.png" alt="Gambar 1">
+        <img src="2.png" alt="Gambar 2">
+        <img src="3.png" alt="Gambar 3">
+        <img src="4.png" alt="Gambar 1">
+        <img src="5.png" alt="Gambar 2">
+        <img src="6.png" alt="Gambar 3">
+        <img src="7.png" alt="Gambar 1">
+        <img src="8.png" alt="Gambar 2">
+        <img src="9.png" alt="Gambar 3">
+        <img src="10.png" alt="Gambar 1">
+        <img src="11.png" alt="Gambar 2">
+        <img src="12.png" alt="Gambar 3">
+        <img src="13.png" alt="Gambar 1">
+        <img src="14.png" alt="Gambar 2">
+        <img src="15.png" alt="Gambar 3">
+        <img src="16.png" alt="Gambar 1">
+        <img src="17.png" alt="Gambar 2">
+        <img src="18.png" alt="Gambar 3">
+        <img src="19.png" alt="Gambar 1">
+        <img src="20.png" alt="Gambar 2">
+        <img src="21.png" alt="Gambar 3">
+        <img src="22.png" alt="Gambar 1">
+        <img src="23.png" alt="Gambar 2">
+        <img src="24.png" alt="Gambar 3">
+        <img src="25.png" alt="Gambar 1">
+        <img src="26.png" alt="Gambar 2">
+        <img src="27.png" alt="Gambar 3">
+        <img src="28.png" alt="Gambar 3">
+        <img src="29.png" alt="Gambar 3">
+        <img src="30.png" alt="Gambar 3">
+    </div>
+
+    <div class="overlay">
+        <img src="" alt="Gambar Diperbesar">
+    </div>
+
+    <script>
+        const images = document.querySelectorAll('.image-container img');
+        const overlay = document.querySelector('.overlay');
+        const overlayImage = document.querySelector('.overlay img');
+
+        // Tambahkan event listener ke setiap gambar
+        images.forEach((image) => {
+            image.addEventListener('click', () => {
+                overlayImage.src = image.src;
+                overlay.classList.add('active');
+            });
+        });
+
+        // Event listener untuk menyembunyikan overlay saat diklik di luar gambar
+        overlay.addEventListener('click', (event) => {
+            if (event.target === overlay) {
+                overlay.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>

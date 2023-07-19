@@ -1,0 +1,324 @@
+/* Tambahkan kode CSS yang Anda berikan di sini */
+
+body {
+    background-image: url('back 10.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+aside h2 {
+    text-align: right;
+}
+
+.image-caption {
+    position: relative;
+}
+
+/* Gaya Caption Enlarged */
+.enlarged {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+    margin: auto;
+    object-fit: contain;
+}
+
+/* Gaya Caption saat diperbesar */
+.enlarged::after {
+    content: '';
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: -1;
+}
+
+/* Gaya Caption saat diperbesar */
+.enlarged:hover {
+    cursor: zoom-out;
+}
+
+/* Gaya Caption saat diperbesar */
+.enlarged:hover::after {
+    cursor: zoom-out;
+}
+
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000000;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header Styles */
+header {
+    background-image: url('bar 4.jpg');
+    background-color: #275439;
+    color: #ffffff;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header img {
+    height: 70px;
+    width: auto;
+    margin-right: 50px;
+}
+
+h1 {
+    margin: 0;
+    font-size: 40px;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #ffffff;
+    font-family: 'Playfair Display', serif;
+}
+
+/* Search Box Styles */
+.search-box {
+    display: flex;
+    align-items: center;
+}
+
+.search-box input[type="text"] {
+    padding: 8px;
+    border-radius: 4px 0 0 4px;
+    border: none;
+    font-size: 14px;
+}
+
+.search-box button {
+    padding: 8px 12px;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+/* Navigation Styles */
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+nav ul li {
+    float: left;
+}
+
+nav ul li a {
+    display: block;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 20px;
+}
+
+nav ul li a:hover {
+    color: #ffffff;
+}
+
+/* Main Content Styles */
+main {
+    padding: 30px;
+}
+
+section {
+    margin-bottom: 10px;
+}
+
+section h2 {
+    font-size: 30px;
+    font-weight: bold;
+    color: #ffffff;
+    margin-left: 10px;
+    margin-right: 965px;
+}
+
+section img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    image-rendering: crisp-edges;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: -o-crisp-edges;
+    image-rendering: pixelated;
+}
+
+figcaption {
+    font-style: italic;
+}
+
+/* Footer Styles */
+footer {
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Slide Menu Styles */
+.slide-menu ul {
+    background-color: #ffffff;
+    display: none;
+    list-style-type: none;
+    position: absolute;
+    z-index: 1;
+}
+
+.slide-menu:hover ul {
+    display: block;
+}
+
+.slide-menu ul li {
+    float: none;
+}
+
+.slide-menu ul li a {
+    display: block;
+    padding: 10px 20px;
+    color: #000000;
+    text-decoration: none;
+}
+
+.slide-menu ul li a:hover {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+/* Tambahkan gaya khusus untuk tulisan menu "VR" */
+.slide-menu > a {
+    font-size: 24px;
+}
+
+/* Gaya Tombol Virtual Reality */
+.virtual-reality-button {
+    display: block;
+    margin: 0 auto;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 18px;
+    text-decoration: none;
+    margin-top: 30px;
+}
+
+.virtual-reality-button:hover {
+    background-color: #666;
+}
+
+/* Gaya Tombol Menu Makanan */
+.menu-makanan-button {
+    display: block;
+    margin: 0 auto;
+    padding: 10px 20px;
+    background-color: #ffffff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    text-decoration: none;
+    margin-top: 30px;
+}
+
+.menu-makanan-button:hover {
+    background-color: #666;
+}
+
+/* Gaya Menu Caption */
+.menu-caption {
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    color: #ffffff;
+    text-align: center;
+    margin-top: 30px;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.image-caption {
+    display: flex;
+    align-items: center;
+}
+
+.image-caption img {
+    margin-right: 5px;
+    position: absolute;
+    top: 130px;
+    left: 78%;
+    transform: translate(-50%, 0%);
+}
+
+.menu-caption {
+    background-color: #ffffff;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font-size: 20px;
+    color: #000000;
+    text-align: left;
+    margin-top: 100px;
+    margin-left: 0px;
+    margin-right: 0px;
+    padding: 80px;
+}
+
+.menu-caption .column {
+    flex-basis: 50%;
+}
+
+/* Ubah ukuran font untuk kolom kanan */
+.menu-caption .column.right {
+    font-size: 18px;
+    text-align: left;
+}
+
+.menu-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #000000;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    position: absolute;
+    top: 1000px;
+    right: 400px;
+    width: 135px;
+    height: 40px;
+}
+
+.menu-link:hover {
+    background-color: #385732;
+    color: #ffffff;
+}
